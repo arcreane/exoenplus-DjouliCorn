@@ -1,5 +1,4 @@
 package com.company;
-import com.company.Main;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,15 +10,15 @@ public class guessNumber {
         int randInt = rand.nextInt(100);
         Scanner scan = new Scanner(System.in);
 
-        System.out.println(randInt);
+        //System.out.println(randInt); => pour tester le jeu
 
-        int K = 10;
+        int T = 10;
 
         System.out.println("Guess a number in 10 trials :");
 
-       for (int i=0; i<=K; i++){
+       for (int i=0; i<=T; i++){
 
-           if (i == K){
+           if (i == T){
                System.out.println("You don't have anymore try.");
                System.out.println("The number was "+randInt);
            }
@@ -31,11 +30,13 @@ public class guessNumber {
                System.out.println("You win !");
                break;
            }
-           else if(randInt<userInput && i != K-1){
+           else if(randInt<userInput && i != T-1){
                System.out.println("Smaller");
+               System.out.println((T-i)+" "+"trials"+" "+"left");
            }
-           else if (randInt>userInput && i != K-1){
+           else if (randInt>userInput && i != T-1){
                System.out.println("Bigger");
+               System.out.println((T-i)+" "+"trials"+" "+"left");
            }
        }
         Main.main(null);
