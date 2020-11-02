@@ -28,7 +28,7 @@ public class Main {
                     case 2:
                         palindrome.palindromeGame();
                     case 3:
-                        //jeu 3
+                        numInArray.numInArrayGame();
                     case 4:
                         //jeu 4
                     case 5:
